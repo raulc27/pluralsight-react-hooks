@@ -1,24 +1,26 @@
 import React, { useRef } from 'react';
 
-const ImageToggleOnMouseOver = ({ 
+const ImageToggleOnScroll = ({ 
     primaryImg, secondaryImg
 }) => {
-    const imageRef = useRef(null)
-    return(
-        <img 
-        onMouseOver={()=>{
-            imageRef.current.src = secondaryImg;
-        }} 
-        onMouseOut={()=>{
-            imageRef.current.src = primaryImg;
-        }}
-        src={primaryImg}
-        alt=""
-        width="200px"
-        ref={imageRef}
+    const imageRef = useRef(null);
 
-        />
+
+    useEffect(()=>{
+        window.addEventListener("scroll", scrollHandler); 
+        return () => {
+            window.removeEventListener("scroll", scrollHandler);
+        }
+    })
+
+    return(
+
+            <img src={primaryImg}
+            alt="" 
+            ref={imageRef}
+            />
+      
     );
 };
 
-export default ImageToggleOnMouseOver;
+export default ImageToggleOnScroll;
