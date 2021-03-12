@@ -9,7 +9,7 @@ const ImageToggleOnScroll = ({
 
     const isInView = () => {
         const rect = imageRef.current.getBoundingClientRect();
-        return rect.top = 0 && rect.bottom <= window.innerHeight;
+        return rect.top >= 0 && rect.bottom <= window.innerHeight;
     };
 
     const [inView, setInView] = useState(false);
@@ -32,7 +32,7 @@ const ImageToggleOnScroll = ({
         <img 
         src={
           //  isLoading ? ""
-            inView ? secondaryImg : primaryImg
+            inView ? primaryImg : secondaryImg
         } 
         alt="" 
         ref={imageRef}
