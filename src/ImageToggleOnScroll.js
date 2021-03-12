@@ -1,9 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const ImageToggleOnScroll = ({ 
     primaryImg, secondaryImg
 }) => {
     const imageRef = useRef(null);
+
+    const [inView, setInView] = useState(false);
 
 
     useEffect(()=>{
@@ -11,7 +13,7 @@ const ImageToggleOnScroll = ({
         return () => {
             window.removeEventListener("scroll", scrollHandler);
         }
-    })
+    },[])
 
     return(
 
