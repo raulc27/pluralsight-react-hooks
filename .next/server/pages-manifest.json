@@ -3,5 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/syntax": "pages/syntax.js",
-  "/ImageChangeOnMouseOver": "pages/ImageChangeOnMouseOver.js"
+  "/ImageChangeOnScroll": "pages/ImageChangeOnScroll.js",
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
 }
