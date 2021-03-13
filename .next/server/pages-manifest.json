@@ -1,7 +1,10 @@
 {
+  "/ImageChangeOnMouseOver": "pages/ImageChangeOnMouseOver.html",
+  "/ImageChangeOnScroll": "pages/ImageChangeOnScroll.html",
+  "/": "pages/index.html",
+  "/syntax": "pages/syntax.html",
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/ImageChangeOnScroll": "pages/ImageChangeOnScroll.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }
